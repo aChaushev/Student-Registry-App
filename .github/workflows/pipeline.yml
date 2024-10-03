@@ -10,11 +10,11 @@ jobs:
   build_test:
     runs-on: ubuntu-latest
     steps:
-    - name: Chekout the code
+    - name: Checkout the code
       uses: actions/checkout@v4
     - name: Install NodeJS
-    - uses: actions/setup-node@v4
+      uses: actions/setup-node@v4
       with:
         node-version: 18
     - name: Install dependencies
-    - run: npm install
+      run: npm install
