@@ -1,0 +1,6 @@
+
+MY_RENDER_SERVICE_ID: srv-crvf24ogph6c73c7rdl0
+-> 
+https://api.render.com/deploy/srv-crvf24ogph6c73c7rdl0?key=VbdcLgLpZ6M
+
+MY_RENDER_API_KEY: rnd_Q6P3ANxXLLuHC3SZSwbcwVeSDvD3

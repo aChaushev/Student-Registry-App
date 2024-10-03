@@ -7,8 +7,12 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build_test:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
     - name: Checkout the code
@@ -16,20 +20,7 @@ jobs:
     - name: Install NodeJS
       uses: actions/setup-node@v4
       with:
-        node-version: 18
-    - name: Install dependencies
-      run: npm install
-
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Checkout the code
-      uses: actions/checkout@v4
-    - name: Install NodeJS
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+        node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: npm install
     - name: Execute intrgration tests
