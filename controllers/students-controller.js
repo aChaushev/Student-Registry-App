@@ -2,7 +2,7 @@ function setup(app, students) {
   app.get('/', function(req, res) {
     let model = {
       title: "MVC Example",
-      msg: "New Students DevOps Registry",
+      msg: "New Students DevOps Registry 2024",
       students: students
     };
     res.render('home', model);
