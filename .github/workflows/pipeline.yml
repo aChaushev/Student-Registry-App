@@ -39,6 +39,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     needs: test # when test pass
     steps:
       - name: Deploy to production
